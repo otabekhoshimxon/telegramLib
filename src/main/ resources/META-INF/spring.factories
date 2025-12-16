@@ -1,0 +1,4 @@
+org.springframework.context.ApplicationContextInitializer=\
+travel.letstrip.LibConfig
+org.springframework.context.ApplicationListener=\
+travel.letstrip.LibApplicationListener
