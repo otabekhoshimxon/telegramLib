@@ -4,6 +4,7 @@ import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.classic.spi.IThrowableProxy;
 import ch.qos.logback.classic.spi.StackTraceElementProxy;
 import ch.qos.logback.core.AppenderBase;
+import lombok.Setter;
 import travel.letstrip.config.TelegramClient;
 
 import java.time.Instant;
@@ -11,15 +12,12 @@ import java.util.Set;
 
 public class TelegramLogbackAppender extends AppenderBase<ILoggingEvent> {
 
+    @Setter
     private TelegramClient telegramClient;
     private TelegramProperties properties;
     private Set<String> allowedLevels;
 
     /* ==== Spring orqali set qilinadi ==== */
-
-    public void setTelegramClient(TelegramClient telegramClient) {
-        this.telegramClient = telegramClient;
-    }
 
     public void setProperties(TelegramProperties properties) {
         this.properties = properties;

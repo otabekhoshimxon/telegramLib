@@ -42,10 +42,7 @@ public class TelegramProperties {
          */
         private String token;
 
-        /**
-         * Bot username (@bot_username)
-         */
-        private String username;
+
 
         /**
          * Webhook mode (false = long polling)
@@ -153,8 +150,7 @@ public class TelegramProperties {
     }
 
     public boolean hasValidBotConfig() {
-        return bot.token != null && !bot.token.isEmpty() 
-            && bot.username != null && !bot.username.isEmpty();
+        return bot.token != null && !bot.token.isEmpty();
     }
 
     public boolean hasValidGroupConfig() {
