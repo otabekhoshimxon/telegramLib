@@ -5,6 +5,7 @@ import ch.qos.logback.classic.Logger;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import travel.letstrip.config.TelegramClient;
 import travel.letstrip.telegram.TelegramLogbackAppender;
@@ -29,5 +30,9 @@ public class TelegramAppenderInitializer {
 
         Logger rootLogger = context.getLogger(Logger.ROOT_LOGGER_NAME);
         rootLogger.addAppender(appender);
+    }
+    @Bean
+    public TelegramClient telegramClient() {
+        return new TelegramClient(properties);
     }
 }

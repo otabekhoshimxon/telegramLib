@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Data
 @Configuration
-@ConditionalOnProperty(prefix = "telegram.bot", name = "enabled", havingValue = "true")
+@ConfigurationProperties(prefix = "telegram")
 public class TelegramProperties {
 
     /**
