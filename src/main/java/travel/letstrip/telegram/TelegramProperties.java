@@ -72,6 +72,9 @@ public class TelegramProperties {
          */
         private String adminId;
 
+        private String reportGroupId;
+
+        private Integer reportGroupTopicId;
         /**
          * Error notification group ID
          */
