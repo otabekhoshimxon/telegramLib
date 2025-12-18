@@ -1,6 +1,7 @@
 package travel.letstrip.utils;
 
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -21,6 +22,7 @@ import java.util.List;
  * <p><b>Note:</b> This class is stateless and should not store
  * {@link HttpServletRequest} as a field.</p>
  */
+@Component
 public final class WebUtils {
 
     private static final List<String> DEVICES = List.of(

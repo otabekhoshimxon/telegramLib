@@ -5,6 +5,7 @@ import com.pengrad.telegrambot.model.request.ParseMode;
 import com.pengrad.telegrambot.request.SendDocument;
 import com.pengrad.telegrambot.request.SendMessage;
 import com.pengrad.telegrambot.request.SendPhoto;
+import org.springframework.stereotype.Component;
 import travel.letstrip.telegram.TelegramProperties;
 
 import java.io.File;
@@ -27,6 +28,7 @@ import java.io.File;
  *
  * <p>All messages are sent using {@link ParseMode#Markdown}.</p>
  */
+@Component
 public class TelegramClient {
 
     private final TelegramBot bot;
