@@ -23,7 +23,7 @@
 
 ```xml
 <dependency>
-  <groupId>io.github.coreteam8800</groupId>
+  <groupId>io.github.otabekhoshimxon</groupId>
   <artifactId>base-lib</artifactId>
   <version>1.1.0</version>
 </dependency>

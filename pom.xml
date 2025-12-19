@@ -6,33 +6,35 @@
 
   <modelVersion>4.0.0</modelVersion>
   <scm>
-    <url>https://github.com/CORETEAM8800/base-lib</url>
-    <connection>scm:git:https://github.com/CORETEAM8800/base-lib.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:CORETEAM8800/base-lib.git</developerConnection>
+    <url>https://github.com/otabekhoshimxon/base-lib</url>
+    <connection>scm:git:https://github.com/otabekhoshimxon/base-lib.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:otabekhoshimxon/base-lib.git</developerConnection>
   </scm>
+
+
   <licenses>
     <license>
-      <name>Apache License, Version 2.0</name>
-      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-      <distribution>repo</distribution>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
+
   <developers>
     <developer>
-      <id>coreteam8800</id>
-      <name>CoreTeam</name>
-      <email>support@letstrip.travel</email>
+      <id>otabekhoshimxon</id>
+      <name>codestack</name>
+      <email>otabekhoshimxon@gmail.com</email>
     </developer>
   </developers>
 
-  <groupId>io.github.coreteam8800</groupId>
+  <groupId>io.github.otabekhoshimxon</groupId>
   <artifactId>base-lib</artifactId>
-  <version>1.2.5</version>
+  <version>1.2.8</version>
   <packaging>jar</packaging>
 
   <name>base-lib</name>
   <description>Shared DTO / util kutubxonasi</description>
-  <url>https://github.com/CORETEAM8800/base-lib</url>
+  <url>https://github.com/otabekhoshimxon/base-lib</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -72,74 +74,30 @@
     </dependency>
 
   </dependencies>
-
   <distributionManagement>
     <snapshotRepository>
       <id>ossrh</id>
       <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2</url>
-    </repository>
   </distributionManagement>
 
-<!--  <build>-->
-<!--    <pluginManagement>-->
-<!--      <plugins>-->
-<!--        <plugin>-->
-<!--          <artifactId>maven-clean-plugin</artifactId>-->
-<!--          <version>3.4.0</version>-->
-<!--        </plugin>-->
 
-<!--        <plugin>-->
-<!--          <artifactId>maven-resources-plugin</artifactId>-->
-<!--          <version>3.3.1</version>-->
-<!--        </plugin>-->
 
-<!--        <plugin>-->
-<!--          <artifactId>maven-compiler-plugin</artifactId>-->
-<!--          <version>3.13.0</version>-->
-<!--          <configuration>-->
-<!--            <release>${maven.compiler.release}</release>-->
-<!--          </configuration>-->
-<!--        </plugin>-->
 
-<!--        <plugin>-->
-<!--          <artifactId>maven-surefire-plugin</artifactId>-->
-<!--          <version>3.3.0</version>-->
-<!--        </plugin>-->
-
-<!--        <plugin>-->
-<!--          <artifactId>maven-jar-plugin</artifactId>-->
-<!--          <version>3.4.2</version>-->
-<!--        </plugin>-->
-
-<!--        <plugin>-->
-<!--          <artifactId>maven-install-plugin</artifactId>-->
-<!--          <version>3.1.2</version>-->
-<!--        </plugin>-->
-
-<!--        <plugin>-->
-<!--          <artifactId>maven-deploy-plugin</artifactId>-->
-<!--          <version>3.1.2</version>-->
-<!--        </plugin>-->
-
-<!--      </plugins>-->
-
-<!--    </pluginManagement>-->
-<!--    <resources>-->
-<!--      <resource>-->
-<!--        <directory>src/main/resources</directory>-->
-<!--        <includes>-->
-<!--          <include>**/*</include>-->
-<!--        </includes>-->
-<!--      </resource>-->
-<!--    </resources>-->
-
-<!--  </build>-->
   <build>
     <plugins>
+
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.13</version>
+        <extensions>true</extensions>
+        <configuration>
+          <serverId>ossrh</serverId>
+          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
+      </plugin>
 
       <!-- Java 17 -->
       <plugin>

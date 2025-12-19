@@ -7,4 +7,6 @@ import travel.letstrip.telegram.TelegramProperties;
 @Configuration
 @EnableConfigurationProperties(TelegramProperties.class)
 public class TelegramAutoConfiguration {
+    public TelegramAutoConfiguration() {
+    }
 }
