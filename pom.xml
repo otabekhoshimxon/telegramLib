@@ -29,13 +29,13 @@
 
   <groupId>io.github.otabekhoshimxon</groupId>
   <artifactId>base-lib</artifactId>
-  <version>1.2.8</version>
+  <version>1.2.9</version>
   <packaging>jar</packaging>
 
 
 
   <name>base-lib</name>
-  <description>Shared DTO / util kutubxonasi</description>
+  <description>Shared DTO </description>
   <url>https://github.com/otabekhoshimxon/base-lib</url>
 
   <properties>
