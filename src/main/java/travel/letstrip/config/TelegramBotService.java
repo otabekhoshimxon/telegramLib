@@ -43,9 +43,9 @@ public class TelegramBotService extends TelegramLongPollingBot {
         for (GroupConfig group : config.getGroups()) {
             try {
                 sendMessage(group, message);
-                results.add("✓ " + group.getName() + " - yuborildi");
+                results.add("✓ " + group.getName() + " - send");
             } catch (TelegramApiException e) {
-                results.add("✗ " + group.getName() + " - xato: " + e.getMessage());
+                results.add("✗ " + group.getName() + " - error: " + e.getMessage());
             }
         }
         return results;
@@ -66,7 +66,7 @@ public class TelegramBotService extends TelegramLongPollingBot {
     public boolean sendMessageByGroupName(String groupName, String message) throws TelegramApiException {
         GroupConfig group = config.getGroupByName(groupName);
         if (group == null) {
-            throw new IllegalArgumentException("Guruh topilmadi: " + groupName);
+            throw new IllegalArgumentException("Group not found : " + groupName);
         }
         return sendMessage(group, message);
     }

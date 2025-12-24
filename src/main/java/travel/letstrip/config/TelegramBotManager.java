@@ -17,7 +17,7 @@ public class TelegramBotManager {
         TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
         botService = new TelegramBotService(config);
         botsApi.registerBot(botService);
-        System.out.println("Bot ishga tushdi: " + config.getBotUsername());
+        System.out.println("Bot is running : " + config.getBotUsername());
     }
     
     public TelegramBotService getBotService() {
