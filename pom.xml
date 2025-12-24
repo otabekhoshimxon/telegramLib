@@ -29,13 +29,13 @@
 
   <groupId>io.github.otabekhoshimxon</groupId>
   <artifactId>base-lib</artifactId>
-  <version>1.6.1</version>
+  <version>1.6.4</version>
   <packaging>jar</packaging>
 
 
 
-  <name>base-lib</name>
-  <description>Shared DTO </description>
+  <name>telegramLib</name>
+  <description>Telegram library </description>
   <url>https://github.com/otabekhoshimxon/base-lib</url>
 
   <properties>
