@@ -46,19 +46,16 @@
   </properties>
 
   <dependencies>
-  <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-security</artifactId>
-      <version>3.1.6</version> <!-- agar sizning servislaringizda boshqa versiya bo'lsa, shu yerga moslang -->
-      <scope>provided</scope>
-    </dependency>
-
     <dependency>
-      <groupId>com.github.pengrad</groupId>
-      <artifactId>java-telegram-bot-api</artifactId>
-      <version>7.0.1</version>
+      <groupId>org.telegram</groupId>
+      <artifactId>telegrambots</artifactId>
+      <version>6.8.0</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.telegram/telegrambots -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.15.2</version>
+    </dependency>
 
     <dependency>
       <groupId>jakarta.servlet</groupId>
